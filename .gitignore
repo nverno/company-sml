@@ -2,7 +2,8 @@
 *~
 .#*
 /.cask
-loaddefs.el
+*loaddefs.el
 *.html 
 *autoloads.el  
 test.el  
+sml-capf.el

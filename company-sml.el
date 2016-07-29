@@ -75,11 +75,11 @@ these in `company-sml-setup' as local `company-backends' for sml files."
 (defvar company-sml-keywords
   '(
     "abstraction" "abstype" "and" "andalso" "as" "before" "case"
-    "datatype" "div" "do" "else" "end" "eqtype" "exception" "fn"
-    "fun" "functor" "handle" "if" "in" "include" "infix" "infixr"
-    "let" "local" "nonfix" "o" "of" "op" "open" "orelse" "overload"
+    "datatype" "div" "do" "else" "end" "eqtype" "exception" "false"
+    "fn" "fun" "functor" "handle" "if" "in" "include" "infix" "infixr"
+    "let" "local" "mod" "nonfix" "o" "of" "op" "open" "orelse" "overload"
     "raise" "rec" "sharing" "sig" "signature" "struct" "structure"
-    "then" "type" "withtype" "with" "where" "while"
+    "then" "true" "type" "use" "val" "withtype" "with" "where" "while"
     )
   "SML keywords taken from `sml-mode'.")
 
@@ -91,7 +91,7 @@ these in `company-sml-setup' as local `company-backends' for sml files."
 
 ;; ------------------------------------------------------------
 ;;* Setup
-
+company-keywords-alist
 (defun company-sml-check (backend backends)
   (cond
    ((atom backends) (eq backend backends))
@@ -103,7 +103,9 @@ these in `company-sml-setup' as local `company-backends' for sml files."
 ;;;###autoload
 (defun company-sml-setup ()
   "Set up company backends for `sml-mode'. Suitable for a hook."
-  (when (company-sml-check 'company-keywords company-sml-backends)
+  (when (and (not (assq 'sml-mode company-keywords-alist))
+             (company-sml-check 'company-keywords
+                                company-sml-backends))
     (company-sml-keywords-setup))
   (when company-sml-backends
     (set (make-local-variable 'company-backends)
