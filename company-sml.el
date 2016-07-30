@@ -91,7 +91,7 @@ these in `company-sml-setup' as local `company-backends' for sml files."
 
 ;; ------------------------------------------------------------
 ;;* Setup
-company-keywords-alist
+
 (defun company-sml-check (backend backends)
   (cond
    ((atom backends) (eq backend backends))
