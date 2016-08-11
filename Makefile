@@ -23,7 +23,7 @@ auto_flags ?= \
                    (update-directory-autoloads wd))"
 
 .PHONY: $(auto) clean distclean
-all: compile $(auto) README.md
+all: compile $(auto)
 
 compile : $(elc)
 %.elc : %.el
