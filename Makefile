@@ -4,7 +4,7 @@ wget ?= wget
 elpa_dir ?= ~/.emacs.d/elpa
 auto ?= company-sml-autoloads.el
 
-el = $(filter-out $(auto),$(wildcard *.el))
+el = $(filter-out $(auto) .dir-locals.el,$(wildcard *.el))
 elc = $(el:.el=.elc)
 
 batch_flags = -batch \
