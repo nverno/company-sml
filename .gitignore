@@ -5,5 +5,4 @@
 *loaddefs.el
 *.html 
 *autoloads.el  
-test.el  
-sml-capf.el
+test.el
