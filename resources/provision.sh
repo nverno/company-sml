@@ -105,6 +105,13 @@ get_sml_repos () {
     done
 }
 
+# AC word list
+ac_words="https://raw.githubusercontent.com/PelleJuul/AC-SML/master/sml-mode"
+get_sml_words () {
+    wget $ac_words
+    mv sml-mode sml-words.dat
+}
+
 # ------------------------------------------------------------
 # get stuff
 
@@ -113,6 +120,7 @@ get_sml_repos () {
 [[ ! -f "The-standard-ml-basis-library.pdf" ]] && get_sml_basis_manual
 [[ ! -d "ml-doc" ]] && get_sml_ml_doc
 [[ ! -d "nsgmls" ]] && get_nsgmls_bin
+[[ ! -f "sml-words.dat" ]] && get_sml_words
 
 get_sml_repos
 
