@@ -72,7 +72,7 @@ these in `company-sml-setup' as local `company-backends' for sml files."
 ;; ------------------------------------------------------------
 ;;* Keywords
 (defvar company-keywords-alist)
-(eval-when-compile
+(eval-and-compile
 
   (defvar company-sml-builtin
    '(
