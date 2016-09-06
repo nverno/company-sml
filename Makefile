@@ -18,7 +18,7 @@ auto_flags ?= \
                       (wd (expand-file-name default-directory))      \
                       (backup-inhibited t)                           \
                       (default-directory                             \
-	                (expand-file-name \"$(elpa_dir)\")))         \
+                        (expand-file-name \"$(elpa_dir)\")))         \
                    (normal-top-level-add-subdirs-to-load-path)       \
                    (update-directory-autoloads wd))"
 
