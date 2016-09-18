@@ -6,3 +6,5 @@
 *.html 
 *autoloads.el  
 test.el
+sml-source
+resources 
