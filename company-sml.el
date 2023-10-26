@@ -1,4 +1,4 @@
-;;; company-sml --- Emacs completion support for SML using company-mode
+;;; company-sml --- Emacs completion support for SML using company-mode  -*- lexical-binding: t; -*-
 
 ;; Author: Noah Peart <noah.v.peart@gmail.com>
 ;; URL: https://github.com/nverno/company-sml
@@ -67,7 +67,7 @@
   "Default company completion backends for SML. If non-nil, setup
 these in `company-sml-setup' as local `company-backends' for sml files."
   :group 'company-sml
-  :type `(choice nil sexp))
+  :type '(repeat sexp))
 
 ;; ------------------------------------------------------------
 ;;* Keywords
